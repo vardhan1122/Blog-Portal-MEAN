@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,500&family=Croissant+One&family=Kanit:wght@400;500&family=Lobster&family=Lobster+Two:wght@700&family=Nosifer&family=Sansita+Swashed:wght@500&display=swap');
+
+/* You can add global styles to this file, and also import other style files */
+.table tbody tr td{
+  font-weight: bold;
+}
+
+/* ---------- Landing page styles ------------------ */
+
+.home-image{
+  background: url("./assets/images/bg-blog2.png") no-repeat scroll center;
+  background-size: cover;
+  height:100vh;
+  color:black;
+  font-size:25px;
+  font-weight: 600;
+  /* filter: brightness(80%); */
+}
+
+/* .bg-shadow{
+  color:black;
+  font-size:25px;
+  font-weight: 600;
+} */
+
+.landing-page{
+  background: white url("./assets/images/bg-blog2.png") no-repeat scroll center;
+  background-size: cover;
+}
+
+/* .wrapper{
+  background-color: rgba(0,0,0,0.8);
+  background-size: cover;
+} */
+
+
+  /* table wrapper */
+  #table-wrapper {
+    position:relative;
+    width:100%;
+
+  }
+
+  #table-scroll {
+    height:100vh;
+    overflow:auto;
+  }
+
+  tbody #table-wrapper{
+  width:100%;
+  }
+
+
+
+.register-logo{
+  display: inline-block;
+  width:100%;
+}
+
+.login-logo{
+  display: inline-block;
+  width:100%;
+}
+
+
+/* Blog */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,500&family=Croissant+One&family=Kanit:wght@400;500&family=Lobster&family=Lobster+Two:wght@700&family=Nosifer&family=Sansita+Swashed:wght@500&display=swap'); */
+.navbar-brand{
+    font-family: Nosifer;
+    font-size:20px ;
+    font-weight: 200;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,500&family=Croissant+One&family=Kanit:wght@400;500&family=Lobster&family=Lobster+Two:wght@700&family=Sansita+Swashed:wght@500&display=swap'); */
+.nav-link{
+    font-family: Croissant One;
+    font-size:20px;
+    font-weight: 200;
+}
+
+.topic{
+   font-family: serif;
+   font-size: 25px;
+   font-weight: 500;
+
+
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
+
+.topic-text{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 2px;
+
+}
+
+.heading{
+    font-family: serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color:rgb(196, 231, 66);
+
+ }
+
+ /* @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lobster&display=swap'); */
+ .heading-text{
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    letter-spacing: 1px;
+ }
+
+
+
+ .info{
+    font-family: serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color:rgb(252, 173, 84);
+
+ }
+ /* @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,500&family=Kanit:wght@400;500&family=Lobster&display=swap'); */
+ .info-text{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+ }
+
+
+ /* @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,500&family=Kanit:wght@400;500&family=Lobster&display=swap'); */
+ .infoURL{
+    font-family: 'Arimo', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+ }
+
+ .created{
+    font-family: 'Arimo', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+ }
+
+ .created-text{
+    font-family: 'Arimo', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+ }
+
+ .blog-image{
+   border-radius: 10px;
+
+ }
+
+ .card{
+   padding:0px;
+ }
+
+ .bg-blog{
+    background: url("./assets/images/bg-blog7.png") no-repeat scroll center;
+    background-size: cover;
+    /* width:100%;
+    height: 100vh; */
+
+ }
+.bg-adminBlog{
+  background: url("./assets/images/bg-blog3.jpg") no-repeat scroll center;
+  background-size: cover;
+  /* width:100%;
+  height: 100vh; */
+
+}

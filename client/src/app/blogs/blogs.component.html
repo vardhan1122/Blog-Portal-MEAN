@@ -1,0 +1,60 @@
+<!-- <div class="bg-blog wrapper1"> -->
+<section class="bg-blog">
+
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-success">Blogs</p>
+    </div>
+  </div>
+
+  <div class="row">
+   <div class="col">
+  <section *ngIf="blogs.length > 0 else elseBlock">
+    <!-- <div class="row suggestion" *ngIf="blogs"> -->
+
+    <div *ngFor="let blog of blogs">
+
+        <div class="card col-md-12 mt-3 bg-dark">
+
+            <div class="card-header text-center bg-warning text-white">
+                <div> <span class="topic">Topic : </span> <span class="topic-text">{{blog.name}}</span></div>
+            </div>
+
+            <div class="card-body bg-info text-white">
+                <div class="container">
+                    <div class="row flex-column-reverse flex-md-row">
+                        <div class="col-md-7">
+                        <span><span class="heading">Heading : </span> <span class="heading-text">{{blog.heading}}</span></span><br/>
+                        <span class="info">Info : </span> <span class="info-text">{{blog.info}}</span>
+                        </div>
+
+                        <div class="col-md-5">
+                        <img class="blog-image img-fluid" [src]="blog.image" alt="" width="400" height="250">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer bg-success text-white">
+                 <a class="infoURL" href = "{{blog.dataUrl}}" alt="" target="_blank">continue reading..</a>
+                 <span class="float-right"><span class="created">Created at : </span> <span class="created-text">{{blog.created | date:'medium'}}</span></span>
+            </div>
+
+        </div>
+      </div>
+      </section>
+
+    <ng-template #elseBlock>
+      <div class="text-danger text-center font-weight-bold text-center">
+       ------------- No Blogs are Available ------------
+      </div>
+    </ng-template>
+
+    </div>
+  </div>
+</div>
+
+</section >
+

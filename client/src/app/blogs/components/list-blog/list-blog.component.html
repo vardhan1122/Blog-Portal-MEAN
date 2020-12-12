@@ -1,0 +1,60 @@
+<div class="bg-adminBlog wrapper1">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-success">Blog Details</p>
+      <a routerLink="/blogs/add-blog" class="btn btn-success btn-sm">Add Blog</a>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+
+      <div id="table-wrapper">
+        <div id="table-scroll">
+          <table class="table table-hover text-center table-striped table-success">
+            <thead class="bg-dark text-white">
+              <tr>
+                <th>SNO</th>
+                <th>Title</th>
+                <th>Blog-Img</th>
+                <th>Heading</th>
+                <th>Info</th>
+                <th>Blog-Url</th>
+                <th>Create-Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="blogs.length > 0 else elseBlock">
+                <tr *ngFor="let blog of blogs">
+                  <td>{{blog._id.substr(blog._id.length - 4)}}</td>
+                  <td>{{blog.name}}</td>
+                  <td>
+                    <img [src]="blog.image" alt="" width="50" height="50">
+                  </td>
+                  <td>{{blog.heading}}</td>
+                  <td>{{blog.info.slice(0,15)}}</td>
+                  <td><a href="{{blog.dataUrl}}" alt="" target="_blank">Info-Url</a></td>
+                  <td>{{blog.created}}</td>
+                  <td>
+                    <a routerLink="/blogs/update/{{blog._id}}" class="btn btn-secondary btn-sm text-white">Update</a>
+                    <button (click)="clickDeleteBlog(blog._id)" class="btn btn-danger btn-sm">delete</button>
+                  </td>
+                </tr>
+            </tbody>
+
+            <ng-template #elseBlock>
+              <tr>
+                <td colSpan="12" class="text-danger font-weight-bold text-center">------------- No Blogs are Available ------------ </td>
+              </tr>
+            </ng-template>
+
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>

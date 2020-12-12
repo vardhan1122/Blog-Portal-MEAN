@@ -1,0 +1,58 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-success">Create New Blog</p>
+    </div>
+  </div>
+  <!--<pre>{{blog | json}}</pre>-->
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <p class="h4">Create Blog</p>
+        </div>
+        <div class="card-body">
+          <form (submit)="submitAddBlog()">
+            <div class="form-group">
+              <input
+                name="name"
+                [(ngModel)]="blog.name"
+                type="text" class="form-control" placeholder="Blog Name">
+            </div>
+            <div class="form-group">
+              <div class="custom-file">
+                <input
+                  (change)="onChangeImage($event)"
+                  name="image"
+                  type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Blog Image</label>
+                <small *ngIf="imageFileName" class="text-success"><img [src]="blog.image" alt="" width="30" height="30"></small>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                name="heading"
+                [(ngModel)]="blog.heading"
+                type="string" class="form-control" placeholder="Heading...">
+            </div>
+            <div class="form-group">
+              <textarea
+                name="info"
+                [(ngModel)]="blog.info"
+                rows="4" class="form-control" placeholder="General Info"></textarea>
+            </div>
+            <div class="form-group">
+              <input
+                name="dataUrl"
+                [(ngModel)]="blog.dataUrl"
+                type="string" class="form-control" placeholder="Data Url..">
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-success btn-sm" value="Add Blog">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

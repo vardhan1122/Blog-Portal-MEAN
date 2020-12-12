@@ -1,0 +1,59 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-secondary">Update Blog</p>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          <p class="h4">Update Blog</p>
+        </div>
+        <div class="card-body">
+          <form (submit)="submitUpdateBlog()">
+            <div class="form-group">
+              <input
+                name="name"
+                [(ngModel)]="selectedBlog.name"
+                type="text" class="form-control" placeholder="Blog Name">
+            </div>
+            <div class="form-group">
+              <div class="custom-file">
+                <input
+                  (change)="onChangeImage($event)"
+                  name="image"
+                  type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Blog Image</label>
+                <small *ngIf="imageFileName" class="text-success">
+                  <img [src]="imageFileName" width="25" height="25">
+                </small>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                name="heading"
+                [(ngModel)]="selectedBlog.heading"
+                type="string" class="form-control" placeholder="Heading...">
+            </div>
+            <div class="form-group">
+              <textarea
+                name="info"
+                [(ngModel)]="selectedBlog.info"
+                rows="4" class="form-control" placeholder="General Info"></textarea>
+            </div>
+            <div class="form-group">
+              <input
+                name="dataUrl"
+                [(ngModel)]="selectedBlog.dataUrl"
+                type="string" class="form-control" placeholder="Data Url...">
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-secondary btn-sm" value="Update Blog">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
